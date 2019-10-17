@@ -28,10 +28,11 @@
         {% endif %}
     </div>
     <div slot="Property">
-      {% for property in item.documents[0].data.properties %}
-        {% if property.group.id == "3" %}
-          <span>{{ property.property.names.name }}</span>
-        {% endif %}
+      {%  for variationProperty in item.documents[0].data.variationProperties %}
+      	 {% if variationProperty.property.id == 3 %}
+            {{ variationProperty.property.names.name }}
+      	    {{ variationProperty.values.value }}
+      	{% endif %}
       {% endfor %}
     </div>
 </single-item>
