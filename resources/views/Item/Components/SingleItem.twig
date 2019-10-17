@@ -18,13 +18,14 @@
 
                 <div class="col-md-7">
                     {% include "CeresCoconut::Item.Components.SingleItem.SingleItem_InformationTable" %}
+                    <slot name="Property"></slot>
                 </div>
 
             </div>
 
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
-            <slot name="Property"></slot>
+
         </div>
     </div>
 </script>
