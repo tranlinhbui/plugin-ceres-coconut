@@ -28,12 +28,9 @@
         {% endif %}
     </div>
     <div slot="Property">
-      {%  for variationProperty in item.documents[0].data.variationProperties %}
-      	 {% if variationProperty.property.id == 3 %}
+
             <p>SlotProperty</p>
-            {{ variationProperty.property.names.name }}
-      	    {{ variationProperty.values.value }}
-      	{% endif %}
-      {% endfor %}
+
+
     </div>
 </single-item>
