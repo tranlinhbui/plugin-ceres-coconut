@@ -11,21 +11,22 @@
                 <div class="col-md-7">
                     <slot name="ImageCarousel"></slot>
                 </div>
-
+                <div class="col-md-7">
+                    <slot name="Property"></slot>
+                </div>
                 <div class="col-md-5 single-rightside">
                     {% include "Ceres::Item.Components.SingleItem.SingleItem_Details" %}
                 </div>
 
                 <div class="col-md-7">
                     {% include "CeresCoconut::Item.Components.SingleItem.SingleItem_InformationTable" %}
-                    <slot name="Property"></slot>
                 </div>
 
             </div>
 
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
-
+            <slot name="Property"></slot>
         </div>
     </div>
 </script>
