@@ -30,6 +30,7 @@
     <div slot="Property">
       {%  for variationProperty in item.documents[0].data.variationProperties %}
           <p>slotProperty</p>
+          {{ variationProperty.property.id }}
           {% if variationProperty.property.id == 3 %}
               {{ variationProperty.property.names.name }}
       	      {{ variationProperty.values.value }}
