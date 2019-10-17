@@ -9,6 +9,7 @@
 
         {% if 'item.technical_data' in itemData or 'all' in itemData %}
             <li class="nav-item" v-if="isTechnicalDataTabActive">
+                <p>Eigenschafttext</p>
                 <a :class="{ 'active': !isDescriptionTabActive && isTechnicalDataTabActive }" class="nav-link" data-toggle="tab" :href="'#data-' + currentVariation.variation.id" role="tab">{{ variationProperty.values.value }}</a>
                 <a :class="{ 'active': !isDescriptionTabActive && isTechnicalDataTabActive }" class="nav-link" data-toggle="tab" :href="'#data-' + currentVariation.variation.id" role="tab">{{ trans("Ceres::Template.singleItemTechnicalData") }}</a>
             </li>
