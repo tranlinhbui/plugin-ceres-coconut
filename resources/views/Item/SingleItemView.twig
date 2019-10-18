@@ -7,7 +7,7 @@
 {{ component( "CeresCoconut::Item.Components.GraduatedPrices" ) }}
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 {{ component( "CeresCoconut::Item.Components.ItemBundle" ) }}
-{{ component("CeresCoconut::Pfad.zur.EigenschaftVueHtml.twig") }}
+{{ component("CeresCoconut::Item.EigenschaftVueHtml.twig") }}
 
 <single-item v-cloak template="#vue-single-item" :item-data="{{ item | json_encode }}" :variation-list-data="{{ variations | json_encode }}" :attribute-name-map="{{attributeNameMap | json_encode}}" :variation-units="{{variationUnits | json_encode}}">
     <div slot="BeforePrice">{{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}</div>
