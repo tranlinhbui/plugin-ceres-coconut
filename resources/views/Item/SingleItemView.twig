@@ -1,12 +1,12 @@
-{{ component( "CeresCoconut::Item.Components.VariationSelect" ) }}
-{{ component( "CeresCoconut::Item.Components.ItemImageCarousel" ) }}
-{{ component( "CeresCoconut::Item.Components.AddToWishList" ) }}
-{{ component( "CeresCoconut::Item.Components.OrderProperties" ) }}
-{{ component( "CeresCoconut::Item.Components.OrderPropertyList" ) }}
-{{ component( "CeresCoconut::Item.Components.SingleItem" ) }}
-{{ component( "CeresCoconut::Item.Components.GraduatedPrices" ) }}
+{{ component( "Ceres::Item.Components.VariationSelect" ) }}
+{{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
+{{ component( "Ceres::Item.Components.AddToWishList" ) }}
+{{ component( "Ceres::Item.Components.OrderProperties" ) }}
+{{ component( "Ceres::Item.Components.OrderPropertyList" ) }}
+{{ component( "Ceres::Item.Components.SingleItem" ) }}
+{{ component( "Ceres::Item.Components.GraduatedPrices" ) }}
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-{{ component( "CeresCoconut::Item.Components.ItemBundle" ) }}
+{{ component( "Ceres::Item.Components.ItemBundle" ) }}
 {{ component( "CeresCoconut::Item.Components.EigenschaftVueHtml.twig") }}
 {{ component("CeresCoconut::Item.EigenschaftVueHtml.twig") }}
 
@@ -22,7 +22,7 @@
     <template slot="ItemListContainer">{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}</template>
     <template slot="FeedbackContainer">{{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}</template>
     <div slot="ImageCarousel">
-        {% set ImageCarouselOverride = LayoutContainer.show("CeresCoconut::SingleItem.ImageCarousel") %}
+        {% set ImageCarouselOverride = LayoutContainer.show("Ceres::SingleItem.ImageCarousel") %}
         {% if ImageCarouselOverride|trim is empty %}
             <item-image-carousel image-url-accessor="url" template="#vue-item-image-carousel"></item-image-carousel>
         {% else %}
