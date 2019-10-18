@@ -7,6 +7,7 @@
 {{ component( "CeresCoconut::Item.Components.GraduatedPrices" ) }}
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 {{ component( "CeresCoconut::Item.Components.ItemBundle" ) }}
+{{ component("CeresCoconut::Pfad.zur.EigenschaftVueHtml.twig") }}
 
 <single-item v-cloak template="#vue-single-item" :item-data="{{ item | json_encode }}" :variation-list-data="{{ variations | json_encode }}" :attribute-name-map="{{attributeNameMap | json_encode}}" :variation-units="{{variationUnits | json_encode}}">
     <div slot="BeforePrice">{{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}</div>
@@ -28,13 +29,21 @@
         {% endif %}
     </div>
     <div slot="Property">
-      {%  for variationProperty in item.documents[0].data.variationProperties %}
-          <p>slotProperty</p>
-          {{ variationProperty.property.id }}
-          {% if variationProperty.property.id == 3 %}
-              {{ variationProperty.property.names.name }}
-      	      {{ variationProperty.values.value }}
-      	  {% endif %}
-      {% endfor %}
+      <variation-properties
+      	template="vue-variation-properties"
+      	v-for="(variationProperty, index) in currentVariation.variationProperties"
+      	v-if="currentVariation.variationProperties"
+      	:key="variationProperty.property.id"
+      	:variationProperty="variationProperty"
+      	:id="3"
+      ></variation-properties>
+      <variation-properties
+      	template="vue-variation-properties"
+      	v-for="(variationProperty, index) in currentVariation.variationProperties"
+      	v-if="currentVariation.variationProperties"
+      	:key="variationProperty.property.id"
+      	:variationProperty="variationProperty"
+      	:id="5"
+      ></variation-properties>
     </div>
 </single-item>
