@@ -1,7 +1,7 @@
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
-{% import "Ceres::Item.Macros.AgeRestriction" as AgeRestriction %}
+{% import "CeresCoconut::Item.Macros.AgeRestriction" as AgeRestriction %}
 
-{% set itemData = config("Ceres.item.data") | split(', ') %}
+{% set itemData = config("CeresCoconut.item.data") | split(', ') %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 
 <script type="x/template" id="vue-single-item">
@@ -15,7 +15,7 @@
                     <slot name="Property"></slot>
                 </div>
                 <div class="col-md-5 single-rightside">
-                    {% include "Ceres::Item.Components.SingleItem.SingleItem_Details" %}
+                    {% include "CeresCoconut::Item.Components.SingleItem.SingleItem_Details" %}
                 </div>
 
                 <div class="col-md-7">
