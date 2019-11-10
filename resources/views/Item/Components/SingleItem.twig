@@ -1,5 +1,5 @@
 {% import "Ceres::Basket.Macros.AddToBasket" as AddToBasket %}
-{% import "Ceres::Item.Macros.AgeRestriction" as AgeRestriction %}
+{% import "CeresCoconut::Item.Macros.AgeRestriction" as AgeRestriction %}
 
 {% set itemData = config("CeresCoconut.item.data") | split(', ') %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
@@ -28,6 +28,6 @@
             <slot name="FeedbackContainer"></slot>
             <slot name="Property"></slot>
         </div>
-
+        
     </div>
 </script>
